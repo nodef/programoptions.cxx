@@ -1,0 +1,9 @@
+assets/
+examples/
+test/
+third_party/
+.gitmodules
+.travis.yml
+appveyor.yml
+sample_exceptions.cxx
+sample.cxx

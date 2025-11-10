@@ -4,27 +4,56 @@
 [![Build Status](https://ci.appveyor.com/api/projects/status/0tidhvat904wagc3/branch/master?svg=true)](https://ci.appveyor.com/project/Fytch/programoptions-hxx)
 [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
 
+Created by [Fytch](https://github.com/Fytch).
+
 ## Contents
-- [Getting started](#getting-started)
-- [Design goals](#design-goals)
-- [Features](#features)
-  - [Syntax](#syntax)
-- [Integration](#integration)
-- [TL;DR](#tldr)
-- [Usage](#usage)
-  - [Example 1 (`abbreviation`, `u32`, `available`, `get`)](#example-1-abbreviation-u32-available-get)
-  - [Example 2 (`fallback`, `was_set`, `string`, `multi`)](#example-2-fallback-was_set-string-multi)
-  - [Example 3 (`description`, `callback`, unnamed parameter)](#example-3-description-callback-unnamed-parameter)
-  - [Example 4 (more `callback`s, more `fallback`s, `f64`, `to_vector`)](#example-4-more-callbacks-more-fallbacks-f64-to_vector)
-  - [Example 5 (`bind`)](#example-5-bind)
-  - [Miscellaneous functions](#miscellaneous-functions)
-- [Defaults](#defaults)
-- [Flags](#flags)
-- [Third-party libraries](#third-party-libraries)
-- [License](#license)
+- [ProgramOptions.hxx](#programoptionshxx)
+  - [Contents](#contents)
+  - [Installation](#installation)
+  - [Getting started](#getting-started)
+    - [`sample.cxx`](#samplecxx)
+    - [`sample_exceptions.cxx`](#sample_exceptionscxx)
+  - [Design goals](#design-goals)
+  - [Features](#features)
+    - [Syntax](#syntax)
+  - [Integration](#integration)
+    - [git](#git)
+    - [CMake](#cmake)
+  - [TL;DR](#tldr)
+  - [Usage](#usage)
+    - [Example 1 (`abbreviation`, `u32`, `available`, `get`)](#example-1-abbreviation-u32-available-get)
+    - [Example 2 (`fallback`, `was_set`, `string`, `multi`)](#example-2-fallback-was_set-string-multi)
+    - [Example 3 (`description`, `callback`, unnamed parameter)](#example-3-description-callback-unnamed-parameter)
+    - [Example 4 (more `callback`s, more `fallback`s, `f64`, `to_vector`)](#example-4-more-callbacks-more-fallbacks-f64-to_vector)
+      - [Let's start with callbacks:](#lets-start-with-callbacks)
+      - [About `.fallback(...)`:](#about-fallback)
+      - [About `.type(...)`:](#about-type)
+      - [Reading `.multi()` options:](#reading-multi-options)
+    - [Example 5 (`bind`)](#example-5-bind)
+    - [Miscellaneous functions](#miscellaneous-functions)
+      - [`void po::parser::silent()`](#void-poparsersilent)
+  - [Defaults](#defaults)
+  - [Flags](#flags)
+    - [`#define PROGRAMOPTIONS_EXCEPTIONS`](#define-programoptions_exceptions)
+    - [`#define NDEBUG`](#define-ndebug)
+    - [`#define PROGRAMOPTIONS_NO_COLORS`](#define-programoptions_no_colors)
+  - [Third-party libraries](#third-party-libraries)
+  - [License](#license)
+
+## Installation
+
+Run:
+```bash
+$ npm i programoptions.cxx
+```
+
+And then include `ProgramOptions.hxx` as follows:
+```c
+#include "node_modules/programoptions.cxx/include/ProgramOptions.hxx"
+```
 
 ## Getting started
-The quickest way to get started is to [download](https://github.com/Fytch/ProgramOptions.hxx/releases/download/v1.0.0/ProgramOptions.hxx) *ProgramOptions.hxx* as well as one of the samples and go from there.
+The quickest way to get started is to include `ProgramOptions.hxx` in one of your source files, and to check out the provided samples in the [/examples](examples) folder.
 
 ### `sample.cxx`
 The default choice. Incorrect usage of *ProgramOptions.hxx*'s API will trigger an assertion which will crash the program in debug mode.
@@ -462,3 +491,10 @@ Setting this flag disables colored output. On Windows, *ProgramOptions.hxx* uses
 
 ## License
 *ProgramOptions.hxx* is licensed under the [MIT License](https://tldrlegal.com/license/mit-license). See the enclosed [LICENSE.txt](LICENSE.txt) for more information.
+
+<br>
+<br>
+
+
+[![ORG](https://img.shields.io/badge/org-nodef-green?logo=Org)](https://nodef.github.io)
+![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/programoptions.cxx)
