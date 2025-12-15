@@ -1,0 +1,24 @@
+{
+  "name": "programoptions.cxx",
+  "version": "1.0.0",
+  "description": "Single-header program options parsing library for C++11; Fytch (2017).",
+  "keywords": [
+    "c",
+    "library",
+    "program",
+    "options",
+    "parsing",
+    "command-line",
+    "cli"
+  ],
+  "homepage": "https://github.com/nodef/programoptions.cxx#readme",
+  "bugs": {
+    "url": "https://github.com/nodef/programoptions.cxx/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodef/programoptions.cxx.git"
+  },
+  "license": "MIT",
+  "main": "programoptions.h"
+}
